@@ -10,19 +10,21 @@ import UIKit
 
 class CalnendarViewController: UIViewController, UICollectionViewDataSource, UICollectionViewDelegate, UICollectionViewDelegateFlowLayout{
     
-    let dateManager = DateManager()
+    let dateManager:DateManager
     let daysPerWeek: Int = 7
     let cellMargin: CGFloat = 2.0
     let weekArray = ["Sun", "Mon", "Tue", "Wed", "Thu", "Fri", "Sat"]
     let headerDateFormat = "yyyy M"
-    var selectedDate = Date()
+    var selectedDate:Date = Date()
     var today: NSDate!
+    var yearAndMonth: String = ""
     
     var headerTitle: UILabel!
     var calenderHeaderView: UIView!
     var calenderCollectionView: UICollectionView!
     
-    init(){
+    init(_ dateManager:DateManager){
+        self.dateManager = dateManager
         super.init(nibName: nil, bundle: nil)
         self.view.backgroundColor = UIColor.white
         self.tabBarItem = UITabBarItem(title: "カレンダー", image:UIImage(named: "calendar-tab.png") , tag: 1)
@@ -37,7 +39,8 @@ class CalnendarViewController: UIViewController, UICollectionViewDataSource, UIC
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+        yearAndMonth = self.currentHeaderTitle(headerDateFormat)
+
         let headerPrevButton = UIBarButtonItem(image: UIImage(named: "arrow-prev.png"), style: .plain, target: self, action: #selector(self.tappedHeaderPrevButton))
         let headerNextButton = UIBarButtonItem(image: UIImage(named: "arrow-next.png"), style: .plain, target: self, action: #selector(self.tappedHeaderNextButton))
 
@@ -127,13 +130,13 @@ class CalnendarViewController: UIViewController, UICollectionViewDataSource, UIC
     func tappedHeaderPrevButton() {
         selectedDate = dateManager.prevMonth(date: selectedDate)
         calenderCollectionView.reloadData()
-        self.navigationItem.title = currentHeaderTitle(headerDateFormat)
+        self.yearAndMonth = currentHeaderTitle(headerDateFormat)
     }
     
     func tappedHeaderNextButton() {
         selectedDate = dateManager.nextMonth(date: selectedDate)
         calenderCollectionView.reloadData()
-        self.navigationItem.title = currentHeaderTitle(headerDateFormat)
+        self.yearAndMonth = currentHeaderTitle(headerDateFormat)
     }
     
     override func didReceiveMemoryWarning() {

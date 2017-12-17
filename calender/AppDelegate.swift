@@ -16,7 +16,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
         
-        let firstTab: UIViewController = CalnendarViewController();
+        let firstTab: UIViewController = CalendarPageViewController(transitionStyle: .scroll, navigationOrientation: .horizontal, options: nil)
+//        UIPageViewController(transitionStyle: UIPageViewControllerTransitionStyle.Scroll, navigationOrientation: UIPageViewControllerNavigationOrientation.Horizontal, options: nil)
         firstNavigationController = UINavigationController(rootViewController: firstTab)
         
         let tabs = [firstNavigationController]
