@@ -18,16 +18,12 @@ class CalnendarViewController: UIViewController, UICollectionViewDataSource, UIC
     var selectedDate = Date()
     var today: NSDate!
     
-    var headerTitle: UILabel!
-    var calenderHeaderView: UIView!
+    var dailyItems: [Item]?
     var calenderCollectionView: UICollectionView!
     
     init(){
         super.init(nibName: nil, bundle: nil)
         self.view.backgroundColor = UIColor.white
-        self.tabBarItem = UITabBarItem(title: "カレンダー", image:UIImage(named: "calendar-tab.png") , tag: 1)
-        self.tabBarItem.selectedImage = UIImage(named: "calendar-tab-selected.png")
-        
     }
     
     required init?(coder aDecoder: NSCoder) {
@@ -48,7 +44,6 @@ class CalnendarViewController: UIViewController, UICollectionViewDataSource, UIC
         self.navigationItem.rightBarButtonItem = headerNextButton
         
         let layout = UICollectionViewFlowLayout()
-        
         calenderCollectionView = UICollectionView(frame: self.view.frame, collectionViewLayout: layout)
         calenderCollectionView.register(CalendarCell.self, forCellWithReuseIdentifier: "cell")
         calenderCollectionView.delegate = self
@@ -57,6 +52,8 @@ class CalnendarViewController: UIViewController, UICollectionViewDataSource, UIC
         
         self.navigationItem.title = currentHeaderTitle(headerDateFormat)
         self.view.addSubview(calenderCollectionView)
+        
+        loadItems()
     }
 
     
@@ -87,9 +84,21 @@ class CalnendarViewController: UIViewController, UICollectionViewDataSource, UIC
         
         if indexPath.section == 0 {
             cell.textLabel?.text = weekArray[indexPath.row]
+            
+            // labelをhiddenにしないとcellの再利用が効いてしまって、うまく表示されない
+            // 曜日の行は本来、collectionViewである必要性はないので、
+            // UIViewなどに移行すればここの処理は必要ない。
+            cell.setTitleLabelIsHidden(true)
         } else {
             let dayLabelText:String = dateManager.conversionDateFormat(indexPath: indexPath, dateFormat: "d")
             cell.textLabel?.text = dayLabelText
+            if let items = self.dailyItems {
+                let cellDate:String = dateManager.conversionDateFormat(indexPath: indexPath, dateFormat: "yyyy-MM-dd")
+                let currentCellDailyItems:[Item] = items.filter({$0.publishDate == cellDate})
+                cell.dailyItems = currentCellDailyItems
+                cell.setItemNameLabel()
+            }
+            cell.setTitleLabelIsHidden(false)
         }
         return cell
     }
@@ -105,6 +114,26 @@ class CalnendarViewController: UIViewController, UICollectionViewDataSource, UIC
     //選択した時
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
 
+    }
+    
+    func loadItems() {
+        // ここからAPIリクエスト。プライベートにきりだすべき
+        let client = ApiClient()
+        
+        // tappleで返却 = makeStartDateAndEndDate(selectedDate)
+        
+        let request = API.SearchItems()
+        client.send(request: request) {result in
+            switch result {
+            case let .success(response):
+                self.dailyItems = response.items
+                DispatchQueue.main.async {
+                    self.calenderCollectionView.reloadData()
+                }
+            case let .failure(error):
+                print(error)
+            }
+        }
     }
     
     //セルの垂直方向のマージンを設定

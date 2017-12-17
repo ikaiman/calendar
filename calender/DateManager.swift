@@ -31,13 +31,17 @@ class DateManager: NSObject {
     var currentMonthOfDates = [NSDate]() //表記する月の配列
     var selectedDate = Date()
     let daysPerWeek: Int = 7
-    var numberOfItems: Int! = 0 //セルの個数 nilが入らないようにする
+    var numberOfItems: Int = 0 //セルの個数 nilが入らないようにする
     
     //月ごとのセルの数を返すメソッド
     func daysAcquisition() -> Int {
         let rangeOfWeeks = Calendar.current.range(of: .weekOfMonth, in: .month, for: firstDateOfMonth() as Date)
+        guard let unwrapedRangeOfWeeks = rangeOfWeeks else {
+            return numberOfItems
+        }
         
-        let numberOfWeeks = Int((rangeOfWeeks?.count)!) //月が持つ週の数
+        let numberOfWeeks = unwrapedRangeOfWeeks.count //月が持つ週の数
+        
         numberOfItems = numberOfWeeks * daysPerWeek //週の数×列の数
         return numberOfItems
     }

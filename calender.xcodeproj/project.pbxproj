@@ -7,8 +7,18 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		4C194A931FE6B8730071F620 /* ApiClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C194A921FE6B8730071F620 /* ApiClient.swift */; };
+		4C194A951FE6B9240071F620 /* API.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C194A941FE6B9240071F620 /* API.swift */; };
+		4C194A971FE6B9840071F620 /* ApiClientError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C194A961FE6B9840071F620 /* ApiClientError.swift */; };
+		4C194A9E1FE6B98C0071F620 /* ApiRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C194A981FE6B98C0071F620 /* ApiRequest.swift */; };
+		4C194A9F1FE6B98C0071F620 /* APIError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C194A991FE6B98C0071F620 /* APIError.swift */; };
+		4C194AA01FE6B98C0071F620 /* JSONDecodable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C194A9A1FE6B98C0071F620 /* JSONDecodable.swift */; };
+		4C194AA11FE6B98C0071F620 /* JSONDecodeError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C194A9B1FE6B98C0071F620 /* JSONDecodeError.swift */; };
+		4C194AA21FE6B98C0071F620 /* HttpMethod.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C194A9C1FE6B98C0071F620 /* HttpMethod.swift */; };
+		4C194AA31FE6B98C0071F620 /* Result.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C194A9D1FE6B98C0071F620 /* Result.swift */; };
+		4C194AA51FE6BA780071F620 /* Item.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C194AA41FE6BA780071F620 /* Item.swift */; };
+		4C194AA71FE6BB490071F620 /* SearchResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C194AA61FE6BB490071F620 /* SearchResponse.swift */; };
 		4C3BA9C21FE6426600003949 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C3BA9C11FE6426600003949 /* AppDelegate.swift */; };
-		4C3BA9C71FE6426600003949 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4C3BA9C51FE6426600003949 /* Main.storyboard */; };
 		4C3BA9C91FE6426600003949 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4C3BA9C81FE6426600003949 /* Assets.xcassets */; };
 		4C3BA9CC1FE6426600003949 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4C3BA9CA1FE6426600003949 /* LaunchScreen.storyboard */; };
 		4C3BA9D71FE6426600003949 /* calenderTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C3BA9D61FE6426600003949 /* calenderTests.swift */; };
@@ -43,9 +53,19 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		4C194A921FE6B8730071F620 /* ApiClient.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ApiClient.swift; sourceTree = "<group>"; };
+		4C194A941FE6B9240071F620 /* API.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = API.swift; sourceTree = "<group>"; };
+		4C194A961FE6B9840071F620 /* ApiClientError.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ApiClientError.swift; sourceTree = "<group>"; };
+		4C194A981FE6B98C0071F620 /* ApiRequest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ApiRequest.swift; sourceTree = "<group>"; };
+		4C194A991FE6B98C0071F620 /* APIError.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = APIError.swift; sourceTree = "<group>"; };
+		4C194A9A1FE6B98C0071F620 /* JSONDecodable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JSONDecodable.swift; sourceTree = "<group>"; };
+		4C194A9B1FE6B98C0071F620 /* JSONDecodeError.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JSONDecodeError.swift; sourceTree = "<group>"; };
+		4C194A9C1FE6B98C0071F620 /* HttpMethod.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HttpMethod.swift; sourceTree = "<group>"; };
+		4C194A9D1FE6B98C0071F620 /* Result.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Result.swift; sourceTree = "<group>"; };
+		4C194AA41FE6BA780071F620 /* Item.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Item.swift; sourceTree = "<group>"; };
+		4C194AA61FE6BB490071F620 /* SearchResponse.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SearchResponse.swift; sourceTree = "<group>"; };
 		4C3BA9BE1FE6426600003949 /* calender.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = calender.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		4C3BA9C11FE6426600003949 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		4C3BA9C61FE6426600003949 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		4C3BA9C81FE6426600003949 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		4C3BA9CB1FE6426600003949 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		4C3BA9CD1FE6426600003949 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -92,6 +112,22 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		4C194A911FE6B8530071F620 /* Commons */ = {
+			isa = PBXGroup;
+			children = (
+				4C194A941FE6B9240071F620 /* API.swift */,
+				4C194A921FE6B8730071F620 /* ApiClient.swift */,
+				4C194A961FE6B9840071F620 /* ApiClientError.swift */,
+				4C194A981FE6B98C0071F620 /* ApiRequest.swift */,
+				4C194A991FE6B98C0071F620 /* APIError.swift */,
+				4C194A9A1FE6B98C0071F620 /* JSONDecodable.swift */,
+				4C194A9B1FE6B98C0071F620 /* JSONDecodeError.swift */,
+				4C194A9C1FE6B98C0071F620 /* HttpMethod.swift */,
+				4C194A9D1FE6B98C0071F620 /* Result.swift */,
+			);
+			name = Commons;
+			sourceTree = "<group>";
+		};
 		4C3BA9B51FE6426600003949 = {
 			isa = PBXGroup;
 			children = (
@@ -116,15 +152,17 @@
 			isa = PBXGroup;
 			children = (
 				4C3BA9C11FE6426600003949 /* AppDelegate.swift */,
+				4C194A911FE6B8530071F620 /* Commons */,
 				4C3BA9F71FE6494700003949 /* Resources */,
-				4C3BA9C51FE6426600003949 /* Main.storyboard */,
-				4C3BA9C81FE6426600003949 /* Assets.xcassets */,
 				4C3BA9CA1FE6426600003949 /* LaunchScreen.storyboard */,
 				4C3BA9CD1FE6426600003949 /* Info.plist */,
+				4C194AA41FE6BA780071F620 /* Item.swift */,
+				4C194AA61FE6BB490071F620 /* SearchResponse.swift */,
 				4C3BA9EF1FE6447700003949 /* CalendarViewController.swift */,
 				4C3BA9F51FE6477800003949 /* CalendarCell.swift */,
 				4C3BA9F11FE6457700003949 /* UIColor+AppDefined.swift */,
 				4C3BA9F31FE6467F00003949 /* DateManager.swift */,
+				4C3BA9C81FE6426600003949 /* Assets.xcassets */,
 			);
 			path = calender;
 			sourceTree = "<group>";
@@ -277,7 +315,6 @@
 				4C3BA9C91FE6426600003949 /* Assets.xcassets in Resources */,
 				4C3BAA021FE6499800003949 /* arrow-next@2x.png in Resources */,
 				4C3BA9FF1FE6499800003949 /* arrow-prev@2x.png in Resources */,
-				4C3BA9C71FE6426600003949 /* Main.storyboard in Resources */,
 				4C3BAA031FE6499800003949 /* arrow-next.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -305,9 +342,20 @@
 			files = (
 				4C3BA9F01FE6447700003949 /* CalendarViewController.swift in Sources */,
 				4C3BA9F61FE6477800003949 /* CalendarCell.swift in Sources */,
+				4C194AA21FE6B98C0071F620 /* HttpMethod.swift in Sources */,
+				4C194A971FE6B9840071F620 /* ApiClientError.swift in Sources */,
+				4C194AA71FE6BB490071F620 /* SearchResponse.swift in Sources */,
+				4C194AA31FE6B98C0071F620 /* Result.swift in Sources */,
+				4C194A9F1FE6B98C0071F620 /* APIError.swift in Sources */,
+				4C194AA01FE6B98C0071F620 /* JSONDecodable.swift in Sources */,
 				4C3BA9F41FE6467F00003949 /* DateManager.swift in Sources */,
 				4C3BA9C21FE6426600003949 /* AppDelegate.swift in Sources */,
+				4C194A9E1FE6B98C0071F620 /* ApiRequest.swift in Sources */,
+				4C194AA51FE6BA780071F620 /* Item.swift in Sources */,
+				4C194AA11FE6B98C0071F620 /* JSONDecodeError.swift in Sources */,
 				4C3BA9F21FE6457700003949 /* UIColor+AppDefined.swift in Sources */,
+				4C194A931FE6B8730071F620 /* ApiClient.swift in Sources */,
+				4C194A951FE6B9240071F620 /* API.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -343,14 +391,6 @@
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
-		4C3BA9C51FE6426600003949 /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				4C3BA9C61FE6426600003949 /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		4C3BA9CA1FE6426600003949 /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
@@ -558,6 +598,7 @@
 				4C3BA9E81FE6426600003949 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		4C3BA9E91FE6426600003949 /* Build configuration list for PBXNativeTarget "calenderTests" */ = {
 			isa = XCConfigurationList;
@@ -566,6 +607,7 @@
 				4C3BA9EB1FE6426600003949 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		4C3BA9EC1FE6426600003949 /* Build configuration list for PBXNativeTarget "calenderUITests" */ = {
 			isa = XCConfigurationList;
@@ -574,6 +616,7 @@
 				4C3BA9EE1FE6426600003949 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
