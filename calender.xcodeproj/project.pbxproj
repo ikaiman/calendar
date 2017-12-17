@@ -8,12 +8,21 @@
 
 /* Begin PBXBuildFile section */
 		4C3BA9C21FE6426600003949 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C3BA9C11FE6426600003949 /* AppDelegate.swift */; };
-		4C3BA9C41FE6426600003949 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C3BA9C31FE6426600003949 /* ViewController.swift */; };
 		4C3BA9C71FE6426600003949 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4C3BA9C51FE6426600003949 /* Main.storyboard */; };
 		4C3BA9C91FE6426600003949 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4C3BA9C81FE6426600003949 /* Assets.xcassets */; };
 		4C3BA9CC1FE6426600003949 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4C3BA9CA1FE6426600003949 /* LaunchScreen.storyboard */; };
 		4C3BA9D71FE6426600003949 /* calenderTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C3BA9D61FE6426600003949 /* calenderTests.swift */; };
 		4C3BA9E21FE6426600003949 /* calenderUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C3BA9E11FE6426600003949 /* calenderUITests.swift */; };
+		4C3BA9F01FE6447700003949 /* CalendarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C3BA9EF1FE6447700003949 /* CalendarViewController.swift */; };
+		4C3BA9F21FE6457700003949 /* UIColor+AppDefined.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C3BA9F11FE6457700003949 /* UIColor+AppDefined.swift */; };
+		4C3BA9F41FE6467F00003949 /* DateManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C3BA9F31FE6467F00003949 /* DateManager.swift */; };
+		4C3BA9F61FE6477800003949 /* CalendarCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C3BA9F51FE6477800003949 /* CalendarCell.swift */; };
+		4C3BA9FE1FE6499800003949 /* arrow-prev@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 4C3BA9F81FE6499800003949 /* arrow-prev@3x.png */; };
+		4C3BA9FF1FE6499800003949 /* arrow-prev@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 4C3BA9F91FE6499800003949 /* arrow-prev@2x.png */; };
+		4C3BAA001FE6499800003949 /* arrow-prev.png in Resources */ = {isa = PBXBuildFile; fileRef = 4C3BA9FA1FE6499800003949 /* arrow-prev.png */; };
+		4C3BAA011FE6499800003949 /* arrow-next@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 4C3BA9FB1FE6499800003949 /* arrow-next@3x.png */; };
+		4C3BAA021FE6499800003949 /* arrow-next@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 4C3BA9FC1FE6499800003949 /* arrow-next@2x.png */; };
+		4C3BAA031FE6499800003949 /* arrow-next.png in Resources */ = {isa = PBXBuildFile; fileRef = 4C3BA9FD1FE6499800003949 /* arrow-next.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -36,7 +45,6 @@
 /* Begin PBXFileReference section */
 		4C3BA9BE1FE6426600003949 /* calender.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = calender.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		4C3BA9C11FE6426600003949 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		4C3BA9C31FE6426600003949 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		4C3BA9C61FE6426600003949 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		4C3BA9C81FE6426600003949 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		4C3BA9CB1FE6426600003949 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -47,6 +55,16 @@
 		4C3BA9DD1FE6426600003949 /* calenderUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = calenderUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		4C3BA9E11FE6426600003949 /* calenderUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = calenderUITests.swift; sourceTree = "<group>"; };
 		4C3BA9E31FE6426600003949 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		4C3BA9EF1FE6447700003949 /* CalendarViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CalendarViewController.swift; sourceTree = "<group>"; };
+		4C3BA9F11FE6457700003949 /* UIColor+AppDefined.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIColor+AppDefined.swift"; sourceTree = "<group>"; };
+		4C3BA9F31FE6467F00003949 /* DateManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DateManager.swift; sourceTree = "<group>"; };
+		4C3BA9F51FE6477800003949 /* CalendarCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CalendarCell.swift; sourceTree = "<group>"; };
+		4C3BA9F81FE6499800003949 /* arrow-prev@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "arrow-prev@3x.png"; sourceTree = "<group>"; };
+		4C3BA9F91FE6499800003949 /* arrow-prev@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "arrow-prev@2x.png"; sourceTree = "<group>"; };
+		4C3BA9FA1FE6499800003949 /* arrow-prev.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "arrow-prev.png"; sourceTree = "<group>"; };
+		4C3BA9FB1FE6499800003949 /* arrow-next@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "arrow-next@3x.png"; sourceTree = "<group>"; };
+		4C3BA9FC1FE6499800003949 /* arrow-next@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "arrow-next@2x.png"; sourceTree = "<group>"; };
+		4C3BA9FD1FE6499800003949 /* arrow-next.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "arrow-next.png"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -98,11 +116,15 @@
 			isa = PBXGroup;
 			children = (
 				4C3BA9C11FE6426600003949 /* AppDelegate.swift */,
-				4C3BA9C31FE6426600003949 /* ViewController.swift */,
+				4C3BA9F71FE6494700003949 /* Resources */,
 				4C3BA9C51FE6426600003949 /* Main.storyboard */,
 				4C3BA9C81FE6426600003949 /* Assets.xcassets */,
 				4C3BA9CA1FE6426600003949 /* LaunchScreen.storyboard */,
 				4C3BA9CD1FE6426600003949 /* Info.plist */,
+				4C3BA9EF1FE6447700003949 /* CalendarViewController.swift */,
+				4C3BA9F51FE6477800003949 /* CalendarCell.swift */,
+				4C3BA9F11FE6457700003949 /* UIColor+AppDefined.swift */,
+				4C3BA9F31FE6467F00003949 /* DateManager.swift */,
 			);
 			path = calender;
 			sourceTree = "<group>";
@@ -123,6 +145,19 @@
 				4C3BA9E31FE6426600003949 /* Info.plist */,
 			);
 			path = calenderUITests;
+			sourceTree = "<group>";
+		};
+		4C3BA9F71FE6494700003949 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				4C3BA9F81FE6499800003949 /* arrow-prev@3x.png */,
+				4C3BA9F91FE6499800003949 /* arrow-prev@2x.png */,
+				4C3BA9FA1FE6499800003949 /* arrow-prev.png */,
+				4C3BA9FB1FE6499800003949 /* arrow-next@3x.png */,
+				4C3BA9FC1FE6499800003949 /* arrow-next@2x.png */,
+				4C3BA9FD1FE6499800003949 /* arrow-next.png */,
+			);
+			name = Resources;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -235,9 +270,15 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4C3BAA011FE6499800003949 /* arrow-next@3x.png in Resources */,
+				4C3BAA001FE6499800003949 /* arrow-prev.png in Resources */,
+				4C3BA9FE1FE6499800003949 /* arrow-prev@3x.png in Resources */,
 				4C3BA9CC1FE6426600003949 /* LaunchScreen.storyboard in Resources */,
 				4C3BA9C91FE6426600003949 /* Assets.xcassets in Resources */,
+				4C3BAA021FE6499800003949 /* arrow-next@2x.png in Resources */,
+				4C3BA9FF1FE6499800003949 /* arrow-prev@2x.png in Resources */,
 				4C3BA9C71FE6426600003949 /* Main.storyboard in Resources */,
+				4C3BAA031FE6499800003949 /* arrow-next.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -262,8 +303,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				4C3BA9C41FE6426600003949 /* ViewController.swift in Sources */,
+				4C3BA9F01FE6447700003949 /* CalendarViewController.swift in Sources */,
+				4C3BA9F61FE6477800003949 /* CalendarCell.swift in Sources */,
+				4C3BA9F41FE6467F00003949 /* DateManager.swift in Sources */,
 				4C3BA9C21FE6426600003949 /* AppDelegate.swift in Sources */,
+				4C3BA9F21FE6457700003949 /* UIColor+AppDefined.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
